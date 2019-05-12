@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Keep</title>
+    <script src="jquery-3.4.0.min.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    
+    <style>
+    body {
+        background: #000000;
+        margin: 10px;
+        padding: 0;
+    }
+    textarea {
+        background: #262626;
+        border: 1px solid #666666;
+        color: #cccccc;
+        resize: none;
+    }
+    textarea:focus, input:focus{
+        outline: none;
+    }
+    .item {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 2px;
+        position: relative;
+        width: 630px;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40px;
+    }
+    .button {
+        color: #FFFFFF;
+        font-size: 26px;
+        background-color: #262626;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2px;
+        margin-top: 2px;
+        border: 1px solid #666666;
+        cursor: pointer;
+        font-family: monospace;
+        font-weight: lighter;
+    }
+    .button.active {
+        background-color: #666666;
+    }
+    .button:first-child {
+        margin-top: 0;
+        background-color: #666666;
+    }
+    .item_text_2, .item_text_3 {
+        display: none;
+    }
+    .item_text_2.visible, .item_text_3.visible {
+        display: flex;
+    }
+    .copy-paste {
+        position: absolute;
+        bottom: 0;
+        right: 9px;
+        height: 50px;
+        color: #cccccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .copy-paste__button {
+        text-align: center;
+        width: 38px;
+        height: 22px;
+        background-color: #262626;
+        transition: .3s;
+        border: 0;
+        color: #cccccc;
+        font-family: monospace;
+        font-size: 10px;
+        line-height: 20px;
+    }
+    .copy-paste__button:hover {
+        width: 45px;
+        margin-right: -7px;
+    }
+    </style>
+    
+    <div class="outer">
+        <div class="item item_text_1">
+            <textarea id="text_1" name="text_1" rows="10" cols="80" autofocus="autofocus"></textarea>
+            <div class="buttons">
+                <div class="button js-number js-number-1 active" data-attr="1">1</div>
+                <div class="button js-number js-number-2" data-attr="2">2</div>
+                <div class="button js-number js-number-3" data-attr="3">3</div>
+            </div>
+            <div class="copy-paste">
+                <div class="copy-paste__button copy-paste__copy js-copy" data-attr="text_1">
+                    copy
+                </div>
+                <div class="copy-paste__button copy-paste__paste js-paste" data-attr="text_1">
+                    paste
+                </div>
+            </div>
+        </div>
+        <div class="item item_text_2">
+            <textarea id="text_2" name="text_2" rows="10" cols="80"></textarea>
+            <div class="copy-paste">
+                <div class="copy-paste__button copy-paste__copy js-copy" data-attr="text_2">
+                    copy
+                </div>
+                <div class="copy-paste__button copy-paste__paste js-paste" data-attr="text_2">
+                    paste
+                </div>
+            </div>
+        </div>
+        <div class="item item_text_3">
+            <textarea id="text_3" name="text_3" rows="10" cols="80"></textarea>
+            <div class="copy-paste">
+                <div class="copy-paste__button copy-paste__copy js-copy" data-attr="text_3">
+                    copy
+                </div>
+                <div class="copy-paste__button copy-paste__paste js-paste" data-attr="text_3">
+                    paste
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
