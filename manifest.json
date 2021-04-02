@@ -3,7 +3,7 @@
 	
 	"name": "TripleKeep",
 	"description": "Simple Triple Notes",
-	"version": "1.5",
+	"version": "1.6",
 	
 	"icons": {
 		"128": "128.png"
@@ -15,7 +15,6 @@
 	},
 	
 	"permissions": [
-		"activeTab",
 		"storage",
 		"clipboardRead",
 		"clipboardWrite"
